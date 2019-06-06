@@ -20,7 +20,7 @@ server.get("/", (req, res) => {
     res.status(200).json("Hello I am sending this from root!")
 } )
 
-//server.use('/projects', require("./routers/projectsRouter"))
+server.use('/api/recipes', require("./routers/recipesRouter"))
 
 server.listen(port, () => {
     console.log(`Server listening on ${port}`);
